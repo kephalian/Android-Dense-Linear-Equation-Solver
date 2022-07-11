@@ -59,7 +59,7 @@ public void Compute_solutions_MathCommons(){
             tmp=String.format("Determinant |A|=%.2f\n", solution);
 ```        
 ### SOLUTION OF LINEAR EQUATION EXISTS
-````java
+```java
             if(solution!=0) {
                 RealVector constants = new ArrayRealVector(vectorB, false);
                 RealVector solution2 = solver.solve(constants);
@@ -67,11 +67,9 @@ public void Compute_solutions_MathCommons(){
 
                 for (int i = 0; i < solution2.getDimension(); i++)
                     tmp1 += String.format("\nX%d = %.2f", i, solution2.getEntry(i));
-               // double xn=solution/values;
-               // tmp=String.format(getResources().getString(R.string.Cr_result),counter,solution,values,xn);
-                tmp+=tmp1;}
- 
-```            
+                    tmp+=tmp1;}
+```        
+        
 ## Make the case for NO SOLUTION
 ```java  
    else
@@ -79,14 +77,13 @@ public void Compute_solutions_MathCommons(){
             tmp="|A| Determinant is Zero.No solution exists.\n";
 
             //Toast.makeText()
-
-         
+       
 
 ```        
-## CONGRATULATIONS YOU JUST SOLVED THE EQAUTION
+## CONGRATULATIONS YOU JUST SOLVED THE EQUATION
 
 ## Note since the number of variables solvable is ulimited x is denoted by xn, y as x2, z as x3, x6 so on till infinity 
-## Notation of variable is Xn
+## Notation of list variables (a, b,c,d,e so on till inifnity) is Xn or Xinfinity
 ## Update the GUI LISTVIEW WITH THE SOLUTIONS
 ````java
 
