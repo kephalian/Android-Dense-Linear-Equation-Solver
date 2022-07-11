@@ -104,8 +104,8 @@ public void Compute_solutions_MathCommons(){
             Snackbar.make(findViewById(android.R.id.content), e.toString(), Snackbar.LENGTH_LONG).setAction("Action", null).show();
         }
 ```
-### Loading variables into Matrix and Vector
-
+### Loading and converting STRING TO/FROM MATRIX/VECTOR variables into Matrix and Vector- UTILITIES
+```java
 public String Show1DArray_MC(double matrixA[]) {
     if((matrixA.length<=0))
         return "";
