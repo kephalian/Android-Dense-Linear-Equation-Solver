@@ -80,12 +80,12 @@ public void Compute_solutions_MathCommons(){
        
 
 ```        
-## CONGRATULATIONS YOU JUST SOLVED THE EQUATION
+### CONGRATULATIONS YOU JUST SOLVED THE EQUATION
 
-## Note since the number of variables solvable is ulimited x is denoted by xn, y as x2, z as x3, x6 so on till infinity 
-## Notation of list variables (a, b,c,d,e so on till inifnity) is Xn or Xinfinity
-## Update the GUI LISTVIEW WITH THE SOLUTIONS
-````java
+### Note since the number of variables solvable is unlimited x is denoted by xn, y as x2, z as x3, x6 so on till infinity 
+### Notation of list variables (a, b,c,d,e so on till inifnity) is Xn or Xinfinity
+### Update the GUI LISTVIEW WITH THE SOLUTIONS
+```java
 
             listView2.startAnimation(drop);
             Snackbar.make(findViewById(android.R.id.content), tmp, Snackbar.LENGTH_LONG).setAction("Action", null).show();
@@ -103,3 +103,126 @@ public void Compute_solutions_MathCommons(){
         } catch (Exception e){
             Snackbar.make(findViewById(android.R.id.content), e.toString(), Snackbar.LENGTH_LONG).setAction("Action", null).show();
         }
+```
+### Loading variables into Matrix and Vector
+
+public String Show1DArray_MC(double matrixA[]) {
+    if((matrixA.length<=0))
+        return "";
+    String result = "";
+
+    for(double a:matrixA)
+    result+= result += String.format("%.2f",a)+"  ";
+
+    return result;
+}
+    /////////////////////////////////////////////////////////////////////
+    public String Show2DArray_MC(double matrixA[][]) {
+        if((matrixA.length<=0)||(matrixA[0].length<=0))
+                return "";
+        String result = "";
+        //       float n[];
+
+        /*for(int i=0;i<matrixA.length;i++)
+        {
+            for(int j=0;j<matrixA[i].length;j++)
+               result+=Float.toString(matrixA[i][j]);
+
+            result+="\n";
+        }*/
+        for (double a[] : matrixA) {
+            for (double b : a)
+                result += String.format("%.2f",b)+"  ";
+            result += "\n";
+        }
+
+
+        return result;
+    }
+    //////////////////////////////////////////////////////////////////
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    public double[][] Stringto2DArray_MC(String input) {
+        //int i=input.replaceAll("\\n","").length()+1;
+        try {
+            input=input.trim();
+            //matrix_A=null;
+            Pattern p=Pattern.compile("\\r?\\n");
+
+            String lines[] =p.split(input);// input.split(p);
+            int count_lines = lines.length;
+            if (count_lines<=0)
+            {return null;}
+            String line[];
+            int jrow= lines[lines.length-1].split("\\s+").length;
+            if (jrow<=0)
+            {return null;}
+            //Toast.makeText(getApplicationContext(),Integer.toString(count_lines)+"======"+Integer.toString(j),Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(),Integer.toString(count_lines),Toast.LENGTH_LONG).show();
+            double[][] matrix_A = new double[count_lines][jrow];
+
+           // A.setLines(count_lines);
+            //j=0;
+            for (int i = 0; i < count_lines; i++) {
+                line = lines[i].split("\\s+");
+                for (int j = 0; j < line.length; j++)
+                {   if(line[j].length()>0)
+                    matrix_A[i][j] = Float.parseFloat(line[j].trim());
+
+                }
+                //Toast.makeText(getApplicationContext(),line[j],Toast.LENGTH_LONG).show();}
+
+                //}
+                //Toast.makeText(getApplicationContext(),Integer.toString(line.length),Toast.LENGTH_LONG).show();
+
+            }
+
+            return matrix_A;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+public double[] Stringto1DArray_MC(String input) {
+    //int i=input.replaceAll("\\n","").length()+1;
+    try {
+        input=input.trim();
+        //matrix_A=null;
+
+        Pattern p=Pattern.compile("\\r?\\n");
+
+        String lines[] =p.split(input);// input.split(p);
+        int count_lines = lines.length;
+        if (count_lines<=0)
+        {return null;}
+        //int j= lines[lines.length-1].split("\\s+").length;
+
+        //Toast.makeText(getApplicationContext(),Integer.toString(count_lines)+"======"+Integer.toString(j),Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(),Integer.toString(count_lines),Toast.LENGTH_LONG).show();
+        double[] matrix_A = new double[count_lines];
+        String item;
+
+
+        for (int i = 0; i < count_lines; i++) {
+            item=lines[i];
+            item=item.trim();
+            if(item.length()>0)
+                matrix_A[i] = Double.parseDouble(lines[i]);
+
+        }
+        //Toast.makeText(getApplicationContext(),line[j],Toast.LENGTH_LONG).show();}
+
+        //}
+        //Toast.makeText(getApplicationContext(),Integer.toString(line.length),Toast.LENGTH_LONG).show();
+
+
+
+        return matrix_A;
+    } catch (Exception e) {
+        return null;
+    }
+}
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+```
