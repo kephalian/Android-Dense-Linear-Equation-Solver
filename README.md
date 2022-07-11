@@ -226,3 +226,9 @@ public double[] Stringto1DArray_MC(String input) {
 }
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ```
+### PROGUARD WILL CREATE PROBLEMS SO ADD CLASSES TO EXCLUDE
+```java
+-keep class org.apache.commons.math3.linear.**
+-keep interface org.apache.commons.math3.linear.**
+-dontwarn org.apache.commons.math3.geometry.**
+```
