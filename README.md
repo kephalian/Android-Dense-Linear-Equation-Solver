@@ -3,7 +3,7 @@ Solve dense linear equations of any SIZE (N) on Android cell phones using an imp
 
 You can study the difficult workings of this program or you can get busy and download the attached APK file (Trust me !) and start solving linear equations.
 The the heart of the program is this code
-```
+```java
 public void Compute_solutions_MathCommons(){
         try{
         //SAFE TRY
@@ -13,7 +13,7 @@ public void Compute_solutions_MathCommons(){
             String tmp;
 ```
 ### Variables initialized, these Predefined functions which are used to convert String to a Vector and a Determinant MATRIX, depicted next
-```
+```java
 
             
             
@@ -25,7 +25,7 @@ public void Compute_solutions_MathCommons(){
 
 ```
 ### Determinant has to be square
-```
+```java
 
             // Determinant has to be square
             if(Matrix[0].length!=Matrix.length)
@@ -35,7 +35,7 @@ public void Compute_solutions_MathCommons(){
             
 ```
 ### Determinant must not be NULL
-```         
+```java         
 
             if((Matrix==null)||(vectorB==null))
             throw new Exception("Matrix is null");
@@ -44,19 +44,22 @@ public void Compute_solutions_MathCommons(){
 ```
 ### MAGIC!
 ### MAGIC OF JAVA COMMON MATH LIBARARY ON AN ANDROID PHONE!!
-```
+```java
  
             RealMatrix matrix=new Array2DRowRealMatrix(Matrix,false);
             DecompositionSolver solver=new LUDecomposition(matrix).getSolver();
-            
-// SQUARE MATRIX DETERMINANT
+```            
+### SQUARE MATRIX DETERMINANT
+```java
             Double solution=new LUDecomposition(matrix).getDeterminant();
-            
-  // LOADING INTO STRING
-  // CHANGE PRECISION SOS %.2f
+ ```     
+ ### LOADING INTO STRING
+ ### CHANGE PRECISION SOS %.2f
+ ```java
             tmp=String.format("Determinant |A|=%.2f\n", solution);
-            
- /// SOLUTION OF LINEAR EQUATION EXISTS
+```        
+### SOLUTION OF LINEAR EQUATION EXISTS
+````java
             if(solution!=0) {
                 RealVector constants = new ArrayRealVector(vectorB, false);
                 RealVector solution2 = solver.solve(constants);
@@ -66,23 +69,26 @@ public void Compute_solutions_MathCommons(){
                     tmp1 += String.format("\nX%d = %.2f", i, solution2.getEntry(i));
                // double xn=solution/values;
                // tmp=String.format(getResources().getString(R.string.Cr_result),counter,solution,values,xn);
-                tmp+=tmp1;
-            }
-            else
+                tmp+=tmp1;}
+ 
+```            
+## Make the case for NO SOLUTION
+```java  
+   else
          
             tmp="|A| Determinant is Zero.No solution exists.\n";
 
             //Toast.makeText()
 
-          /*  if(counter==0)
-            {
-                values=Float.parseFloat(String.format("%.2f",solution));
-                counter++;}
-            else
-            {*/
+         
 
+```        
+## CONGRATULATIONS YOU JUST SOLVED THE EQAUTION
 
-
+## Note since the number of variables solvable is ulimited x is denoted by xn, y as x2, z as x3, x6 so on till infinity 
+## Notation of variable is Xn
+## Update the GUI LISTVIEW WITH THE SOLUTIONS
+````java
 
             listView2.startAnimation(drop);
             Snackbar.make(findViewById(android.R.id.content), tmp, Snackbar.LENGTH_LONG).setAction("Action", null).show();
@@ -100,4 +106,3 @@ public void Compute_solutions_MathCommons(){
         } catch (Exception e){
             Snackbar.make(findViewById(android.R.id.content), e.toString(), Snackbar.LENGTH_LONG).setAction("Action", null).show();
         }
-```
