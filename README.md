@@ -1,7 +1,7 @@
 # Android-Dense-Linear-Equation-Solver
 Solve dense linear equations of any SIZE (N) on Android cell phones using an implemention of Apache.Math.Common on Android Java. 
 
-## Download the compiled APK (works on any current Android phone), copy APK on Sdcard and Install via File manager or ABD 
+## Download the compiled APK (works on any current Android phone), copy APK on Sdcard and Install via File manager or Android Debug Bridge 
 [Download APK File](https://github.com/kephalian/Android-Dense-Linear-Equation-Solver/blob/main/app-debug.apk) 
 
 ## Read the long paper about how this was accomplished and tested for errors NeuroQuantology in July2022 Volume20 Issue8 Page4959-4973 
