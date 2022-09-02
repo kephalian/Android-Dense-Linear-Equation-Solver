@@ -1,8 +1,16 @@
 # Android-Dense-Linear-Equation-Solver
 Solve dense linear equations of any SIZE (N) on Android cell phones using an implemention of Apache.Math.Common on Android Java. 
 
-You can study the difficult workings of this program or you can get busy and download the attached APK file (Trust me !) and start solving linear equations.
+You can study the difficult workings of this program or you can get busy and download the attached APK file (Trust me !) and start solving linear equations.This program also has many other features like compuatation of Eigenvalues and Eigenvector of Matrices, Determinant, Inverse of a Matrix.
+
+Before you start criticizing me like, the one chinese scholars who called my work trivial,uninteresting and non-academic one. This was implemented in 2016 long before Pydroid, Numpy and SymPy but not published (obviously). This is Standalone Android GUI Program implemented in JAVA and not in Numpy/Scipy/ Sympy CPython running off PyDroid emulator for Android (which can do this more efficiently). 
+
+This App was not released on PlayStore as I could not get Android Studio to install (duh!) and compile Hello world!, consequently could not fullfill their minimum target API,  then they shifted to Kotlin and now to Dart/ Flutter (_both of which are beyond me, the infinite brackets {} paradigm of Flutter is hell, **I don't know who LOVES infinite {{{{}}}}}}}} nested brackets of Flutter**_).
+
+
+
 The the heart of the program is this code
+
 ```java
 public void Compute_solutions_MathCommons(){
         try{
