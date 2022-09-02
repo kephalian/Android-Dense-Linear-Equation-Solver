@@ -7,12 +7,14 @@ Solve dense linear equations of any SIZE (N) on Android cell phones using an imp
 ## Read the long paper about how this was accomplished and tested for errors NeuroQuantology in July2022 Volume20 Issue8 Page4959-4973 
 
 
-
-[Download the Research paper publised in the Neuroquantology journal](https://github.com/kephalian/Android-Dense-Linear-Equation-Solver/blob/main/20220818055414pmNQ44521.pdf)
+[Download the Research paper published in the Neuroquantology journal](https://github.com/kephalian/Android-Dense-Linear-Equation-Solver/blob/main/20220818055414pmNQ44521.pdf)
 
 [From Journal Neuroquantology Site Volume 20, No 8 (2022) Article](https://www.neuroquantology.com/article.php?id=5523)
 
-You can study the difficult workings of this program or you can get busy and download the attached APK file (Trust me !) and start solving linear equations.
+You can study the difficult workings of this program or you can get busy and download the attached APK file (Trust me !) and start solving linear equations. 
+
+[Here is link to Java Program](https://github.com/kephalian/Android-Dense-Linear-Equation-Solver/blob/main/Single.java)
+
 ## This program also has many other features like computations of Eigenvalues and Eigenvector of Matrices, Determinant, Inverse of a Matrix.
 
 
