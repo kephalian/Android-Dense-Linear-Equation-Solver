@@ -257,3 +257,13 @@ public double[] Stringto1DArray_MC(String input) {
 -keep interface org.apache.commons.math3.linear.**
 -dontwarn org.apache.commons.math3.geometry.**
 ```
+
+
+
+
+
+Pull requests are solicited!
+Prof. Dr. Santhosh Kumar Rajamani
+MAEER MIT Pune's MIMER Medical College
+Find me @ [ORCID](https://orcid.org/0000-0001-6552-5578)
+        @ [Google Scholar](https://scholar.google.com/citations?hl=en&user=lU7vGgQAAAAJ)
